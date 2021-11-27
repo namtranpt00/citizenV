@@ -5,7 +5,7 @@ import axios from 'axios';
 
 function App() {
 
-    var res = fetch('http://127.0.0.1:8000/api/home', {
+    var res = fetch('http://127.0.0.1/api/home', {
         mode: 'no-cors',
         method: "get",
         headers: {

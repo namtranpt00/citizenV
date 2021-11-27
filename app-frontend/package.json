@@ -12,7 +12,7 @@
     "react-scripts": "3.4.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --hot --host 0.0.0.0 --inline",
+    "start": "webpack-dev-server --mode development --open --hot --host 127.0.0.1 --port 3000 --inline",
     "build": "webpack --mode production",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
