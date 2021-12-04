@@ -23,9 +23,9 @@ services:
             - "./:/var/www/html"
         ports:
             - "9000:9000"
-    mysql:
+    db:
         image: mysql:8.0
-        container_name: citizen_db
+        container_name: db
         restart: always
         ports:
             - "3306:3306"
