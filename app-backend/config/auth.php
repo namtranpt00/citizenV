@@ -94,7 +94,10 @@ return [
             'throttle' => 60,
         ],
     ],
-
+    'api' => [
+        'driver' => 'token',
+        'provider' => 'users',
+    ],
     /*
     |--------------------------------------------------------------------------
     | Password Confirmation Timeout

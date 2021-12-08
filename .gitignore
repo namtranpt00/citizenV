@@ -1,2 +1,3 @@
 /app-backend/docker/mysql/
 /app-backend/docker/
+/app-backend/vendor/

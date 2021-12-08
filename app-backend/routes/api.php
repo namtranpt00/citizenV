@@ -2,8 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\ProvinceController;
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -15,9 +15,20 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/home', [UserController::class, 'listall']);
+Route::post('login', [AuthController::class, 'login']);
 
 
+Route::group(['middleware' => ['auth:sanctum']], function () {
+    //user
+    Route::post('register', [AuthController::class, 'register']);
+    Route::post('user/update/{id}', [AuthController::class, 'update_user']);
+    Route::delete('user/{id}', [AuthController::class, 'delete_user']);
+    Route::post('logout', [AuthController::class, 'logout']);
+
+
+    Route::resource('provinces', ProvinceController::class);
+
+});
