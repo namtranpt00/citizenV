@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProvinceController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DistrictController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -29,6 +30,9 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('logout', [AuthController::class, 'logout']);
 
 
-    Route::resource('provinces', ProvinceController::class);
+    Route::resource('province', ProvinceController::class);
+    Route::post('province/list', [ProvinceController::class, 'list']);
+    Route::resource('district', DistrictController::class);
+    Route::post('district/list', [DistrictController::class, 'list']);
 
 });
