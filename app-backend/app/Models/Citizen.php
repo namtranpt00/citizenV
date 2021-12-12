@@ -14,10 +14,15 @@ class Citizen extends Model
     protected $keyType = 'string';
     protected $fillable = [
         'id',
-        'first_name',
-        'last_name',
+        'name',
+        'ID_number',
         'date_of_birth',
-        'district_id',
-        'address',
+        'gender',
+        'hometown',
+        'permanent_address',
+        'temporary_address',
+        'religion',
+        'education_level',
+        'job',
     ];
 }

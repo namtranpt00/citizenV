@@ -31,16 +31,19 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('user/update/{id}', [AuthController::class, 'update_user']);
     Route::delete('user/{id}', [AuthController::class, 'delete_user']);
     Route::post('logout', [AuthController::class, 'logout']);
-
+    //Tỉnh
     Route::resource('province', ProvinceController::class);
     Route::post('province/list', [ProvinceController::class, 'list']);
-
+    //Huyện
     Route::resource('district', DistrictController::class);
     Route::post('district/list', [DistrictController::class, 'list']);
-
+    //Xã
     Route::resource('ward', WardController::class);
     Route::post('ward/list', [WardController::class, 'list']);
-
+    //Thôn
     Route::resource('hamlet', HamletController::class);
     Route::post('hamlet/list', [HamletController::class, 'list']);
+    //Người dân
+    Route::resource('citizen', CitizenController::class);
+    Route::post('citizen/list', [CitizenController::class, 'list']);
 });
