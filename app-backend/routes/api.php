@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProvinceController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DistrictController;
+use App\Http\Controllers\WardController;
+use App\Http\Controllers\HamletController;
+use App\Http\Controllers\CitizenController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -29,10 +32,15 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::delete('user/{id}', [AuthController::class, 'delete_user']);
     Route::post('logout', [AuthController::class, 'logout']);
 
-
     Route::resource('province', ProvinceController::class);
     Route::post('province/list', [ProvinceController::class, 'list']);
+
     Route::resource('district', DistrictController::class);
     Route::post('district/list', [DistrictController::class, 'list']);
 
+    Route::resource('ward', WardController::class);
+    Route::post('ward/list', [WardController::class, 'list']);
+
+    Route::resource('hamlet', HamletController::class);
+    Route::post('hamlet/list', [HamletController::class, 'list']);
 });

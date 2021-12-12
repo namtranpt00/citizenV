@@ -5,15 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Province extends Model
+class Citizen extends Model
 {
     use HasFactory;
-    protected $table = 'provinces';
+    protected $table = 'citizen';
     protected $primaryKey = 'id';
     public $incrementing = false;
     protected $keyType = 'string';
     protected $fillable = [
         'id',
-        'name',
+        'first_name',
+        'last_name',
+        'date_of_birth',
+        'district_id',
+        'address',
     ];
 }

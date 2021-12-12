@@ -9,9 +9,11 @@ class District extends Model
 {
     use HasFactory;
     protected $table = 'districts';
+    protected $primaryKey = 'id';
+    public $incrementing = false;
+    protected $keyType = 'string';
     protected $fillable = [
         'id',
         'name',
-        'province_id'
     ];
 }
