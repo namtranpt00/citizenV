@@ -139,10 +139,11 @@ class CitizenController extends Controller
         if (isset($request->job)) {
             $citizen = $citizen->where('job', 'LIKE', '%' . $request->job . '%');
         }
+        $citizen = $citizen->paginate(2);
 
         $response = [
             'success' => true,
-            'citizen' => $citizen->get()
+            'citizen' => $citizen
         ];
         return response($response, 201);
     }
