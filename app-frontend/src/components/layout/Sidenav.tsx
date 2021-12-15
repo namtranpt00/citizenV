@@ -16,8 +16,8 @@ import { Menu, Button } from "antd";
 // import logo from "../../assets/images/logo.png";
 
 function Sidenav({/*  color */ }) {
-  const { pathname } = useLocation();
-  const page = pathname.replace("/", "");
+  // const { pathname } = useLocation();
+  // const page = pathname.replace("/", "");
 
   const dashboard = [
     <svg

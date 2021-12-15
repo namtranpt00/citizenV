@@ -267,7 +267,7 @@ function Billing() {
   const newest = [
     {
       headding: <h6>NEWEST</h6>,
-      avatar: mins,
+      // avatar: mins,
       title: "Netflix",
       description: "27 March 2021, at 12:30 PM",
       amount: "- $2,500",
@@ -325,7 +325,7 @@ function Billing() {
           <Row gutter={[24, 0]}>
             <Col xs={24} xl={12} className="mb-24">
               <Card
-                title={wifi}
+                // title={wifi}
                 bordered={false}
                 className="card-credit header-solid h-ful"
               >
@@ -351,7 +351,7 @@ function Billing() {
                 <Statistic
                   title={
                     <>
-                      <div className="icon">{angle}</div>
+                      <div className="icon">{/* angle */}</div>
                       <h6>Salary</h6>
                       <p>Belong Interactive</p>
                     </>
@@ -403,7 +403,7 @@ function Billing() {
                       <img src={/* mastercard */ ""} alt="mastercard" />
                       <h6 className="card-number">**** **** **** 7362</h6>
                       <Button type="link" className="ant-edit-link">
-                        {pencil}
+                        {/* {pencil} */}
                       </Button>
                     </Card>
                   </Col>
@@ -412,7 +412,7 @@ function Billing() {
                       <img src={/* visa */ ""} alt="visa" />
                       <h6 className="card-number">**** **** **** 3288</h6>
                       <Button type="link" className="ant-edit-link">
-                        {pencil}
+                        {/* {pencil} */}
                       </Button>
                     </Card>
                   </Col>
@@ -438,7 +438,7 @@ function Billing() {
               dataSource={data}
               renderItem={(item) => (
                 <List.Item
-                  actions={[<Button type="link">{download} PDF</Button>]}
+                  // actions={[<Button type="link">{download} PDF</Button>]}
                 >
                   <List.Item.Meta
                     title={item.title}
@@ -479,10 +479,10 @@ function Billing() {
                     </div>
                     <div className="col-action">
                       <Button type="link" danger>
-                        {deletebtn}DELETE
+                        {/* {deletebtn}DELETE */}
                       </Button>
                       <Button type="link" className="darkbtn">
-                        {pencil} EDIT
+                        {/* {pencil} EDIT */}
                       </Button>
                     </div>
                   </Card>
@@ -499,7 +499,7 @@ function Billing() {
             title={<h6 className="font-semibold m-0">Your Transactions</h6>}
             extra={
               <p className="card-header-date">
-                {calender}
+                {/* {calender} */}
                 <span>23 - 30 March 2021</span>
               </p>
             }

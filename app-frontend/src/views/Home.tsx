@@ -30,7 +30,6 @@ import {
   RightOutlined,
 } from "@ant-design/icons";
 import Paragraph from "antd/lib/typography/Paragraph";
-
 import Echart from "../components/chart/EChart";
 import LineChart from "../components/chart/LineChart";
 
@@ -45,6 +44,8 @@ import LineChart from "../components/chart/LineChart";
 // import team3 from "../assets/images/team-3.jpg";
 // import team4 from "../assets/images/team-4.jpg";
 // import card from "../assets/images/info-card-1.jpg";
+
+
 
 function Home() {
   const { Title, Text } = Typography;

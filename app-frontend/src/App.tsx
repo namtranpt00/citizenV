@@ -17,7 +17,6 @@ import Profile from "./views/Profile";
 import SignUp from "./views/SignUp";
 import SignIn from "./views/SignIn";
 import Main from "./components/layout/Main";
-import "antd/dist/antd.css";
 import "./assets/styles/main.css";
 import "./assets/styles/responsive.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -29,11 +28,15 @@ function App() {
         <Routes>
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/sign-in" element={<SignIn />} />
-          <Route path="/dashboard" element={<Home />} />
-          <Route path="/tables" element={<Tables />} />
-          <Route path="/billing" element={<Billing />} />
-          <Route path="/rtl" element={<Rtl />} />
-          <Route path="/profile" element={<Profile />} />
+          {/* <Main> */}
+            {" "}
+            <Route path="/dashboard" element={<Main />} />
+            <Route path="/tables" element={<Tables />} />
+            <Route path="/billing" element={<Billing />} />
+            <Route path="/rtl" element={<Rtl />} />
+            <Route path="/profile" element={<Profile />} />
+          {/* </Main> */}
+
           {/* <Redirect from="*" to="/dashboard" />  */}
         </Routes>
       </Router>

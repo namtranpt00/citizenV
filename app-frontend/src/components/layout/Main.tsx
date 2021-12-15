@@ -19,7 +19,7 @@ import Footer from "./Footer";
 
 const { Header: AntHeader, Content, Sider } = Layout;
 
-function Main({ /* children  */}) {
+function Main({  }) {
   const [visible, setVisible] = useState(false);
   const [placement, setPlacement] = useState("right");
   const [sidenavColor, setSidenavColor] = useState("#1890ff");
